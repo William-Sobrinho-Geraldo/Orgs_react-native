@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FlatList, Text, StyleSheet } from "react-native";
 import { carregaProdutores } from "../../../servicos/cerregaDados";
+import Produtor from "./Produtor";
 
 
 export default function Produtores({ topo: Topo }) {
@@ -23,7 +24,7 @@ export default function Produtores({ topo: Topo }) {
 
     return <FlatList
         data={lista}
-        renderItem={({ item: { nome }}) => <Text style={estilos.teste}>{ nome }</Text>}
+        renderItem={({ item }) => <Produtor {...item} />}
         keyExtractor={({ nome }) => nome}
         ListHeaderComponent={ TopoLista } />
 
@@ -37,10 +38,6 @@ const estilos = StyleSheet.create({
         marginTop: 16,
         fontWeight: "bold",
         color: "#464646",
-    },
-    teste:{
-        marginVertical: 70,
-
     }
 })
 
