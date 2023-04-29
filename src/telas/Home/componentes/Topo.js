@@ -1,6 +1,6 @@
 import React from "react";
 import { Image, StyleSheet, Text, View } from "react-native";
-import { carregaTopo } from "../../../servicos/cerregaDados";
+import { carregaTopo } from "../../../servicos/carregaDados";
 import Logo from "../../../../assets/logo.png";
 
 
